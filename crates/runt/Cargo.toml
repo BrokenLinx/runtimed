@@ -1,0 +1,21 @@
+[package]
+name = "runt-cli"
+version = "0.2.0"
+edition = "2021"
+description = "CLI for Jupyter Runtimes"
+repository = "https://github.com/runtimed/runtimed"
+license = "BSD-3-Clause"
+
+[[bin]]
+name = "runt"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+jupyter-protocol = { workspace = true }
+runtimelib = { workspace = true, features = ["tokio-runtime", "ring"] }
+clap = { version = "4.5.1", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }

@@ -1,0 +1,12 @@
+[package]
+name = "mybinder"
+version = "0.1.0"
+edition = "2021"
+description = "MyBinder build API"
+repository = "https://github.com/runtimed/runtimed"
+license = "BSD-3-Clause"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }

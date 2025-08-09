@@ -1,0 +1,22 @@
+[package]
+name = "ollama-kernel"
+version = "0.5.0"
+edition = "2021"
+description = "Ollama Jupyter Kernel"
+repository = "https://github.com/runtimed/runtimed"
+license = "BSD-3-Clause"
+
+[dependencies]
+runtimelib = { workspace = true, features = ["tokio-runtime", "ring"] }
+jupyter-protocol = { workspace = true }
+async-trait = { workspace = true }
+anyhow = { workspace = true }
+bytes = { workspace = true }
+chrono = { workspace = true }
+clap = { version = "4.5.1", features = ["derive"] }
+futures = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+reqwest = { version = "0.12.8", features = ["json", "stream"] }
+tokio = { version = "1.36.0", features = ["full"] }
